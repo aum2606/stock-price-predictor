@@ -45,10 +45,10 @@ class MinMaxScaling(PreprocessingStrategy):
                 pd.dataframe -> scaled features dataframe
         """
         logging.info(f"appyling MinMax scaler to the dataframe")
-        data_transformed = data[["Close"]]
-        data_transformed = self.scaler.fit_transform(data_transformed)
+        data = data[["Close"]]
+        scaled_data = self.scaler.fit_transform(data)
         logging.info("MinMax scaling complete")
-        return data_transformed
+        return scaled_data
 
 
 
@@ -73,7 +73,7 @@ class PreProcessor:
         logging.info("switching preprocessing strategy")
         self.preprocessing_strategy = preprocessing_strategy
 
-    def apply_data_preprocessing(self,data:pd.DataFrame) ->pd.DataFrame:
+    def apply_data_preprocessing(self,data) ->pd.DataFrame:
         """
             applying data preprocessing using selected strategy
 
