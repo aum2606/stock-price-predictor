@@ -83,4 +83,3 @@ if __name__=="__main__":
     missing_value_analysis = SimpleMissingValueAnalysis()
     missing_value_analysis.identify_missing_values(data)
     missing_value_analysis.visualize_missing_values(data)
-    print(data.head())
