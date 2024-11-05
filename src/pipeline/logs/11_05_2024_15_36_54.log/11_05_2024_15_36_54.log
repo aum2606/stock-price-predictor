@@ -1,0 +1,4 @@
+[2024-11-05 15:36:54,371] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 15:36:54,371] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 15:36:54,379] 50 root - INFO -MinMax scaling complete
+[2024-11-05 15:36:54,379] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x00000237780D0B50>
