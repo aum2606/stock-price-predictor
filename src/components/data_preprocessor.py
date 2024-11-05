@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 class PreprocessingStrategy(ABC):
     @abstractmethod
-    def apply_data_transformation(self,df:pd.DataFrame)->pd.DataFrame:
+    def apply_data_transformation(self,data:pd.DataFrame)->pd.DataFrame:
         """
             Abstract method to apply data transformation(feature engineering) to the dataframe
 
@@ -34,7 +34,7 @@ class MinMaxScaling(PreprocessingStrategy):
         self.scaler = MinMaxScaler(feature_range=feature_range) 
 
 
-    def apply_data_transformation(self, df: pd.DataFrame) -> pd.DataFrame:
+    def apply_data_transformation(self, data: pd.DataFrame) -> pd.DataFrame:
         """
             Applies standard scaler transformation to the specified features in the dataframe
 
@@ -73,7 +73,7 @@ class PreProcessor:
         logging.info("switching preprocessing strategy")
         self.preprocessing_strategy = preprocessing_strategy
 
-    def apply_data_preprocessing(self,df:pd.DataFrame) ->pd.DataFrame:
+    def apply_data_preprocessing(self,data:pd.DataFrame) ->pd.DataFrame:
         """
             applying data preprocessing using selected strategy
 
@@ -84,11 +84,11 @@ class PreProcessor:
                 pd.dataframe -> preprocessed dataframe
         """
         logging.info("applying preprocessing strategy")
-        return self.preprocessing_strategy.apply_data_transformation(df=df)
+        return self.preprocessing_strategy.apply_data_transformation(data)
     
 
 if __name__=="__main__":
     data = pd.read_csv('D:\coding\ml\stock-price-predictor\src\components\data\AAPL_stock_data.csv')
     data_preprocessor = PreProcessor(MinMaxScaling(feature_range=(0,1)))
-    data_transform_scaled = data_preprocessor.apply_data_preprocessing(df=data)
+    data_transform_scaled = data_preprocessor.apply_data_preprocessing(data=data)
     print(data_transform_scaled.shape)
