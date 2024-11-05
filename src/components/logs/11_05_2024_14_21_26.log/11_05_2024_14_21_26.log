@@ -1,0 +1,3 @@
+[2024-11-05 14:21:27,060] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 14:21:27,060] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 14:21:27,063] 50 root - INFO -MinMax scaling complete
