@@ -24,19 +24,6 @@ def training_pipeline(data):
     print(X_test.shape)
     print(y_test.shape)
 
-    # Prepare training and testing datasets
-    # train_size = int(len(scaled_data) * 0.8)
-    # train_data, test_data = scaled_data[:train_size], scaled_data[train_size:]
-    # time_step = 60
-    # x_train, y_train = create_sequences(train_data, time_step)
-    # x_test, y_test = create_sequences(test_data, time_step)
-
-    # # Reshape data for LSTM/RNN/GRU input
-    # X_train = x_train.reshape((x_train.shape[0], x_train.shape[1], 1))
-    # X_test = x_test.reshape((x_test.shape[0], x_test.shape[1], 1))
-
-    #building models for data training
-
     predict_models = {}
 
     model_builder = ModelBuilder(LSTMModelBuilder())
