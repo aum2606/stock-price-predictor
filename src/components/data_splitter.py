@@ -21,11 +21,12 @@ def create_sequences(data,time_step=60):
       
 
 class CustomDataSplittingStrategy(DataSplittingStrategy):
-    def split_data(self, data):
-        train_size = int(len(data)*0.8)
-        train_data,test_data = data[:train_size],data[train_size:]
-        X_train,y_train = create_sequences(train_data,time_step=60)
-        X_test,y_test = create_sequences(test_data,time_step=60)
+    def split_data(self, sclaed_data):
+        train_size = int(len(sclaed_data)*0.8)
+        train_data,test_data = sclaed_data[:train_size],sclaed_data[train_size:]
+        time_step = 60
+        X_train,y_train = create_sequences(train_data,time_step)
+        X_test,y_test = create_sequences(test_data,time_step)
         X_train = X_train.reshape((X_train.shape[0],X_train.shape[1],1))
         X_test = X_test.reshape((X_test.shape[0],X_test.shape[1],1))
         return X_train,y_train,X_test,y_test
@@ -75,3 +76,6 @@ if __name__=="__main__":
     splitter = DataSplitter(strategy=CustomDataSplittingStrategy())
     X_train,X_test,y_train,y_test = splitter.split(scaled_data)
     print(X_train.shape)
+    print(y_train.shape)
+    print(X_test.shape)
+    print(y_test.shape)
