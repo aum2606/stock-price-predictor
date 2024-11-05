@@ -48,7 +48,8 @@ def training_pipeline(data):
     for key in model_history.keys():
         print(key)
 
-    history = lstm_model.fit(X_train, y_train, epochs=100, batch_size=32, verbose=0,validation_data=(X_test,y_test))
+    return model_history
+
 
 if __name__=="__main__":
     ticker = "AAPL"  # Replace with desired ticker symbol
