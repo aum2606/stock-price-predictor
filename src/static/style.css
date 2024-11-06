@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #333;
+}
+
+#form-container {
+  margin: 20px;
+  text-align: center;
+}
+
+#last-60-days {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#result-container {
+  margin-top: 30px;
+  width: 80%;
+  max-width: 600px;
+}
+
+canvas {
+  width: 100%;
+  max-width: 600px;
+}

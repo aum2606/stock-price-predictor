@@ -1,0 +1,23 @@
+[2024-11-05 15:25:40,239] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 15:25:40,240] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 15:25:52,590] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 15:25:52,590] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 15:26:34,899] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 15:26:34,899] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 15:32:13,819] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 15:32:13,819] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 15:33:39,079] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 15:33:39,079] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 15:33:50,281] 86 root - INFO -applying preprocessing strategy
+[2024-11-05 15:33:50,281] 47 root - INFO -appyling MinMax scaler to the dataframe
+[2024-11-05 15:36:26,390] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x000002217560A590>
+[2024-11-05 16:45:26,278] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x0000022175B15990>
+[2024-11-05 16:51:20,891] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x000002217E6986D0>
+[2024-11-05 16:52:39,440] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x000002217E74E810>
+[2024-11-05 17:50:56,902] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x00000221079C7610>
+[2024-11-05 18:06:00,681] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x000002211097A350>
+[2024-11-05 18:09:26,934] 65 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x0000022113C6E390>
+[2024-11-05 19:04:52,291] 64 root - INFO -Splitting the data using selected strategy <__main__.CustomDataSplittingStrategy object at 0x0000022118BF2B10>
+[2024-11-05 19:05:20,328] 64 root - INFO -Splitting the data using selected strategy <__main__.CustomDataSplittingStrategy object at 0x0000022118AAA590>
+[2024-11-05 19:05:45,423] 64 root - INFO -Splitting the data using selected strategy <__main__.CustomDataSplittingStrategy object at 0x0000022107C82590>
+[2024-11-05 19:52:47,871] 64 root - INFO -Splitting the data using selected strategy <__main__.CustomDataSplittingStrategy object at 0x0000022118A09690>

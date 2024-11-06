@@ -44,7 +44,7 @@ class MovingAverageVisualizerStrategy(DataVisualizationStrategy):
         plt.plot(data['Close'],label='Close price')
         plt.plot(data['MA50'],label='50 days moving average',linestyle='-')
         plt.plot(data['MA200'],label='200 days moving average',linestyle='-')
-        plt.title("Closing price with 30,60 and 90 days moving average")
+        plt.title("Closing price with 50 and 200 days moving average")
         plt.xlabel("Date")
         plt.ylabel('Price')
         plt.legend()
