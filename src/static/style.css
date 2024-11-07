@@ -1,46 +1,155 @@
-body {
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+/* Body styling with background image */
+body {
+  background-image: url("background.jpg"); /* Replace with the path to your trading-themed image */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-h1 {
+/* Semi-transparent overlay for better text readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Container styling */
+.container {
+  position: relative;
   margin-top: 20px;
-  color: #333;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  z-index: 1;
 }
 
-#form-container {
-  margin: 20px;
+/* Header styling at the top of the screen */
+.header {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
   text-align: center;
 }
 
-#last-60-days {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #4caf50;
-  color: white;
+/* Input field styling */
+input[type="text"] {
+  width: 60%;
+  padding: 12px;
   border: none;
-  cursor: pointer;
-  font-size: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #333;
+  background-color: #f4f7f9;
+  transition: transform 0.2s;
 }
 
-#result-container {
-  margin-top: 30px;
-  width: 80%;
-  max-width: 600px;
+input[type="text"]:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+button {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ffdb4d;
+  transform: scale(1.05);
+}
+
+/* Main content area (centered for results and canvas) */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 50px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Chart container */
+#chart-container {
+  width: 100%;
+  margin-top: 20px;
 }
 
 canvas {
-  width: 100%;
-  max-width: 600px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Result text styling */
+.result-section {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 40px;
+  font-size: 0.8em;
+  color: #aaa;
+  z-index: 1;
+}
+
+/* Footer links */
+.footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  input[type="text"],
+  button {
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .result-section {
+    font-size: 1em;
+  }
 }
