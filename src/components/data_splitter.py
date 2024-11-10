@@ -6,7 +6,7 @@ from src.logger import logging
 
 
 
-class DataSplittingStrategy(ABC):
+class DataSplittingStrategy(ABC): 
     @abstractmethod
     def split_data(self,data):
         pass

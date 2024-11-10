@@ -1,0 +1,2 @@
+[2024-11-09 16:37:36,420] 66 root - INFO -Splitting the data using selected strategy <src.components.data_splitter.CustomDataSplittingStrategy object at 0x0000015E7F4B0750>
+[2024-11-09 16:37:36,550] 83 absl - WARNING -You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
